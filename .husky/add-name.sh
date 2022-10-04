@@ -2,4 +2,4 @@
 
 NAME=$1
 
-echo "https://avatars.githubusercontent.com/$NAME"
+deno run --allow-write --allow-read src/index.ts --visitor="$NAME"

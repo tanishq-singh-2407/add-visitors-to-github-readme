@@ -7,7 +7,7 @@ jobs:
     name: Add Name
     runs-on: ubuntu-latest
 
-    if: github.event.issue.title == 'Add My Name'
+    if: github.event.issue.title == 'Add My Name' || github.event.issue.title == 'add my name'
 
     steps:
       - run: gh issue comment $ISSUE --body "Thank you for opening this issue!, We're working on your name!"
@@ -23,7 +23,7 @@ jobs:
       - name: Set env vars
         run: echo "USER_NAME=${{ github.event.issue.user.login }}" >> $GITHUB_ENV
 
-      - name: Rendering
+      - name: Updating visitors.json and Rendering new README.md
         run: bash .husky/add-name.sh $USER_NAME
 
       - name: Updating Repo
