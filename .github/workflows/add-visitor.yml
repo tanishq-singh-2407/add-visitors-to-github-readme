@@ -10,16 +10,15 @@ jobs:
     if: github.event.issue.title == 'Add My Name'
 
     steps:
+      - run: gh issue comment $ISSUE --body "Thank you for opening this issue!, We're working on your name!"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
+
       - uses: actions/checkout@v3
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-
-      - name: "Update issue status"
-        run: gh issue comment $ISSUE --body "Thank you for opening this issue!, We're working on your name!"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE: ${{ github.event.issue.html_url }}
 
       - name: Set env vars
         run: echo "USER_NAME=${{ github.event.issue.user.login }}" >> $GITHUB_ENV
