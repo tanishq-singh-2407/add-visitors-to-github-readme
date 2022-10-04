@@ -19,10 +19,3 @@ jobs:
 
       - name: Updating Repo
         run: bash .husky/update-repo.sh
-
-      - name: "Close this issue"
-        if: ${{ always() }}
-        run: gh issue close $ISSUE --comment "Updated your name on this repo's README.md file!! 🥳🥳"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE: ${{ github.event.issue.html_url }}
