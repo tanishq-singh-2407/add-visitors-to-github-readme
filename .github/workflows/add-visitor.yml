@@ -10,5 +10,23 @@ jobs:
     if: github.event.issue.title == '_add_my_name_'
 
     steps:
-      - name: Add name
-        run: echo "Hello"
+      - uses: actions/checkout@v3
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Set env vars
+        run: echo "USER_NAME=${{ github.event.issue.user.login }}" >> $GITHUB_ENV
+
+      - name: Rendering
+        run: bash .husky/add-name.sh $USER_NAME
+
+      - name: Updating Repo
+        run: bash .husky/update-repo.sh
+
+      - name: Issue Resolved
+        if: ${{ always() }}
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'update-issue'
+          state: 'closed'
