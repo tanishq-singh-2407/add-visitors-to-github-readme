@@ -7,7 +7,7 @@ jobs:
     name: Add Name
     runs-on: ubuntu-latest
 
-    if: github.event.issue.title == '_add_my_name_'
+    if: github.event.issue.title == 'Add My Name'
 
     steps:
       - uses: actions/checkout@v3
