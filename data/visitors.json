@@ -2,6 +2,6 @@
     "$schema": "./visitors.schema.json",
     "name": "Add visitors to Github's README",
     "visitors": [
-        "tanishq-singh-2301"
+        "vaidehiverma640"
     ]
 }
