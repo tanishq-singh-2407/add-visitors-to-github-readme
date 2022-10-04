@@ -1,0 +1,14 @@
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-name:
+    name: Add Name
+    runs-on: ubuntu-latest
+
+    if: github.event.issue.title === '_add_my_name_'
+
+    steps:
+      - name: Add name
+        run: echo "Hello"
