@@ -14,6 +14,7 @@
     <a target="_blank" rel="noopener" href="https://github.com/codedamn"><img src="https://avatars.githubusercontent.com/codedamn?s=96" width="96px" height="96px" /></a>
     <a target="_blank" rel="noopener" href="https://github.com/mehulmpt"><img src="https://avatars.githubusercontent.com/mehulmpt?s=96" width="96px" height="96px" /></a>
     <a target="_blank" rel="noopener" href="https://github.com/matyo91"><img src="https://avatars.githubusercontent.com/matyo91?s=96" width="96px" height="96px" /></a>
+    <a target="_blank" rel="noopener" href="https://github.com/jyotiradityz"><img src="https://avatars.githubusercontent.com/jyotiradityz?s=96" width="96px" height="96px" /></a>
 </p>
 
 Don't see your badge? Then create an [_**issue.**_](https://github.com/tanishq-singh-2301/add-visitors-to-github-readme/issues/new?title=Add+My+Name&body=Jush+push+'Submit+new+issue'.+You+don't+need+to+do+anything+else.+wait+to+see+live+updated.)
